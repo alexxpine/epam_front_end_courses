@@ -1,0 +1,9 @@
+body {
+    font-family: 'Roboto', sans-serif;
+    font-size: 14px;
+}
+
+.btn-coral {
+    background-color: lightcoral;
+    color: white
+}

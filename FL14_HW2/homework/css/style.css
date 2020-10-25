@@ -1,0 +1,139 @@
+:root {
+    --color-primary: #76cdd8;
+    --color-secondary: #019999;
+    --color-thirdly: #24d4d4;
+}
+
+.tm-mb-30 {
+    margin-bottom: 30px;
+}
+
+.tm-bg-color-primary {
+    background-color: var(--color-primary);
+}
+
+.tm-bg-color-secondary {
+    background-color: var(--color-secondary);
+}
+
+.tm-text-color-primary {
+    color:var(--color-primary);
+}
+
+.btn-primary {
+    background-color: var(--color-secondary);
+    border-color: var(--color-secondary);
+}
+
+.btn-primary:hover {
+    background-color:rgb(118, 205, 216);
+    border-color: rgb(118, 205, 216);
+}
+ 
+.btn-secondary {
+    background-color: var(--color-secondary);
+    border-color: var(--color-secondary);
+}
+
+.tm-card:nth-child(even) {
+    position: relative;
+    flex-direction: row-reverse;
+}
+
+.tm-card:nth-child(odd) {
+    position: relative;
+}
+
+.tm-card:nth-child(even)::before,
+.tm-card:nth-child(odd)::before {
+    content: "";
+    position: absolute;
+    display: none;
+    top: 0;
+    border-style: solid;
+}
+
+.tm-card:nth-child(even)::before {
+    left: 0;
+    border-width: 75px 75px 0 0;
+    border-color: var(--color-primary) transparent transparent transparent;
+}
+
+.tm-card:nth-child(odd)::before {
+    right: 0;
+    border-width: 0 75px 75px 0;
+    border-color: transparent var(--color-primary) transparent transparent;
+}
+
+.tm-card:hover {
+    color: var(--color-primary);
+    transition: all .2s;
+}
+
+.tm-section:hover.tm-card:nth-child(even)::before,
+.tm-section:hover.tm-card:nth-child(odd)::before {
+    display: block;
+}
+
+.img-fluid {
+    position: relative;
+    transition: .2s;
+}
+
+.img-fluid:hover {
+    transform: scale(1.1);
+    z-index: 10;
+}
+
+.tm-pricing-table {
+    border-color: var(--color-secondary);
+}
+
+.tm-form-header {
+    background-color: var(--color-primary);
+}
+
+.tm-contact-form,
+.tm-form-footer {
+    margin-top: -50px;
+}
+
+.tm-contact-form {
+    z-index: 10;
+}
+
+.tm-form-footer {
+    z-index: -1;
+}
+
+.tm-form-header {
+    background-color: var(--color-thirdly);
+}
+
+.tm-pricing-table:hover {
+    box-shadow: 0 0 0 0.2rem var(--color-thirdly);
+    transition: .2s;
+}
+
+.tm-pricing-table:hover .btn-secondary {
+    background-color: var(--color-thirdly);
+    border-color: var(--color-secondary);
+    transition: .2s;
+}
+
+.tm-pricing-discount__star {
+    color: red;
+}
+
+.tm-pricing-discount__text {
+    color: var(--color-thirdly);
+}
+
+.tm-pricing-table:hover .tm-pricing-discount {
+    display: block;
+}
+
+.form-control:focus {
+    border-color: var(--color-thirdly);
+    box-shadow: 0 0 0 0.2rem var(--color-thirdly);
+}
